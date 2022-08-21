@@ -42,6 +42,28 @@ def read_item(num: int):
         "number_twice": result
         }
 
+@app.get("/form")
+def form_post(request: Request):
+    result = {
+        'message': "Enter the URL"
+    }
+    return templates.TemplateResponse('form.html', context={'request': request, 'result': result})
+
+
+# @app.post("/form")
+# def form_post(request: Request, link: str = Form(...)):
+#     result = result = {
+#         'message': f"The URL Entered is {link}"
+#     }
+#     return templates.TemplateResponse('form.html', context={'request': request, 'result': result})
+
+@app.post("/view")
+def form_post(request: Request, link: str = Form(...)):
+    result = result = {
+        'message': f"The URL Entered is {link}"
+    }
+    ##TODO Change the template to view.html
+    return templates.TemplateResponse('form.html', context={'request': request, 'result': result})1
 
 
 if __name__ == '__main__':
