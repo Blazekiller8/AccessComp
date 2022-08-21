@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            outline: 0 !important;     
+        }
+        body {
+            /* background: linear-gradient(145deg, rgb(185, 255, 193), rgb(171, 209, 255)); */
+            background: rgb(255, 238, 216);
+
+        }
+        
+        header {
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            padding: 1.5em 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+
+
+        /* Intro Page */
+
+        #intro {
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            padding-top: 1em;
+        }
+
+        #intro .intro-left {
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            padding: 3em 0;
+        }
+
+        #intro .intro-left h1 {
+            font-size: 2.5em;
+            color: #241b57;
+            line-height: 1.5em;
+            position: relative;
+            margin-bottom: 1em;
+        }
+
+        #intro .intro-left h1::after {
+            bottom: -24px;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            content: '';
+            border-radius: 5px;
+            background: #ec4357;
+            opacity: 0.4;
+            position: absolute;
+        }
+
+        #intro .intro-left p {
+            font-size: 1.125em;
+            line-height: 1.75em;
+        }
+
+        /* #intro .intro-left a.intro-cta {
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            max-width: 180px;
+            margin-top: 2em;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 3px;
+            background: #ec4357;
+            padding: 1em;
+        } */
+
+        #intro .intro-right {
+            position: relative;
+            display: inline-block;
+            margin-left: 6em;
+        }
+
+        #intro .intro-right img {
+            max-width: 300px;
+        }
+
+        #intro .top-right-gradient {
+            position: absolute;
+            top: -40%;
+            right: -30%;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: linear-gradient(#ee9ca7, #ec4357)
+        }
+
+        #intro .bottom-left-gradient {
+            position: absolute;
+            bottom: 10px;
+            left: -9px;
+            width: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background: linear-gradient(#c779d0, #4bc0c8)
+        }
+
+        /* About Section*/
+
+        textarea {
+            background: white;
+            border: 1px solid #888;
+            min-height: 30rem;
+            min-width: 60rem;
+            resize: none;
+            overflow: none;
+            margin-top: -7rem;
+            margin-left: 30rem;
+            /* margin: flex;
+            display: flex center; */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        /* $('textarea') .focus(function() {
+                $(this).css("background", "none")
+
+            }) .blur(function() {
+                if ($(this)[0].value=='') {
+                    $(this).css("background", "url(images/benice.png) center center no-repeat")
+                }
+            }); */
+    </style>
+</head>
+
+<body>
+
+    <section id="intro">
+        <div class="top-right-gradient">
+
+        </div>
+        <div class="wrapper">
+
+            <div class="intro-left">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet eveniet exercitationem, blanditiis
+                    hic dolor. Voluptas quam saepe, aspernatur sequi ipsa corporis tempora nemo tempore commodi magnam
+                    incidunt sit distinctio?</p>
+                <!-- <a href="#" class="intro-cta">
+                    Try it for Free
+                </a> -->
+            </div>
+
+            <div class="intro-right">
+                <img src="https://i.postimg.cc/bJJR3th2/undraw-growth-analytics-8btt.png" alt="image">
+            </div>
+        </div>
+
+        <div class="bottom-left-gradient">
+
+        </div>
+    </section>
+
+    <section>
+        <textarea placeholder="Remember, be nice!. Enter Text Here"></textarea>
+    </section>
+</body>
+
+</html>
