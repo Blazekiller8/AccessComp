@@ -1,10 +1,8 @@
 
 '''
-Created on 
+Created on : 21 Aug 2022
 
-Course work: 
-
-@author: 
+@author: Sivaraam T K, Vikram M, Elakia VM
 
 Source:
 
@@ -63,7 +61,7 @@ def form_post(request: Request, link: str = Form(...)):
         'message': f"The URL Entered is {link}"
     }
     ##TODO Change the template to view.html
-    return templates.TemplateResponse('form.html', context={'request': request, 'result': result})1
+    return templates.TemplateResponse('form.html', context={'request': request, 'result': result})
 
 
 if __name__ == '__main__':
