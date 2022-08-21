@@ -20,16 +20,42 @@ def startpy():
 
     driver = webdriver.Chrome(PATH)
 
-    url = 'https://en.wikipedia.org/wiki/API'
+    url = 'https://en.wikipedia.org/wiki/English_language'
     driver.get(url)
-
-    text = driver.find_element_by_xpath('//*[@id="mw-content-text"]/div[1]/p[2]').text
-    if text=='':
-        text = driver.find_element_by_xpath('//*[@id="mw-content-text"]/div[1]/p[3]').text
-    text = re.sub("[\(\[].*?[\)\]]", "", text)
-    print(text)
+    
+    # text = driver.find_element_by_xpath('//*[@id="mw-content-text"]/div[1]/p[2]').text
+    for i in range(1,10):
+        # if text=='':
+        try:
+            text = driver.find_element_by_xpath(f'//*[@id="mw-content-text"]/div[1]/p[{i}]').text
+            text = re.sub("[\(\[].*?[\)\]]", "", text)
+            print(text)
+        except:
+            print("for loop not running")
     pass
 
+def stackoverflow():
+    url = 'https://stackoverflow.com/questions/47258636/scrape-the-p-tag-using-python-selenium'
+    driver.get(url)
+    text = driver.find_element_by_class_name('question-hyperlink').text
+    print(text)
+    # para = driver.find_element_by_class_name('s-prose js-post-body')
+    for i in range(1,5):
+        try: 
+            para1 = driver.find_element_by_xpath(f'//*[@id="question"]/div[2]/div[2]/div[1]/p[{i}]').text 
+            para1 = re.sub("[\(\[].*?[\)\]]", "", para1)
+
+            print(para1)
+        except:
+            print("error in the except loop")
+
+def medium():
+    url = 'https://medium.com/featurepreneur/aws-support-plan-12fd3e39cd7d'
+    driver.get(url)
+    text =driver.find_element_by_class_name('pw-post-title it iu iv bn iw ix iy iz ja jb jc jd je jf jg jh ji jj jk jl jm jn jo jp jq jr fx').text
+    print(text)
 
 if __name__ == '__main__':
-    startpy()
+    # startpy()
+    # stackoverflow()
+    medium()
