@@ -63,7 +63,7 @@ def form_post(request: Request, link: str = Form(...)):
         'message': f"The URL Entered is {link}"
     }
     ##TODO Change the template to view.html
-    return templates.TemplateResponse('form.html', context={'request': request, 'result': result})1
+    return templates.TemplateResponse('view.html', context={'request': request, 'result': result})
 
 
 if __name__ == '__main__':

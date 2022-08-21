@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+
     <title>Sample Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0 !important;
+        }
+
+        body {
+            /* background: linear-gradient(145deg, rgb(185, 255, 193), rgb(171, 209, 255)); */
+            background: rgb(255, 238, 216);
+
+        }
+
+        #login-card {
+            width: 45rem;
+            border-radius: 25px;
+            margin: 150px auto;
+            font-size: larger;
+            font-weight: 700;
+
+        }
+
+        #link {
+            border-radius: 30px;
+            background-color: #eaf1ff;
+            border-color: #ebf0fc;
+            color: #000000;
+            color: black;
+            font-size: larger;
+            padding: 25px;
+        }
+
+        #button {
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: larger;
+
+        }
+        #btn {
+            position: absolute;
+            bottom: -35px;
+            padding: 5px;
+            margin: 0px 55px;
+            align-items: center;
+            border-radius: 5px"
+
+        }
+    </style>
 </head>
+
 <body>
-<p>{{ result.message }}</p>
+    <!-- 
+    <form method="post" action="/view">
+        <input type="text" name="link" />
+        <input type="submit">
+    </form> -->
 
-<form method="post" action="/view">
-    <input type="text" name="link" />
-    <input type="submit">
-</form>
+    <div id="login-card" class="card">
+        <div class="card-body" >
+            <h4 style="margin: 12px;" >Enter the URL Here</h4>
 
+            <br>
+            <form method="post" action="/view">
+                <div class="form-group">
+                    <input type="text" aria-label="Enter Link" class="form-control" id="link" placeholder="Enter Link" name="link">
+                </div>  
+                <button type="submit" id="button" aria-label="Submit" class="btn btn-primary deep-purple btn-block ">Submit</button>
+                <br>
+                <br>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
