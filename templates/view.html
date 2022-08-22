@@ -16,6 +16,7 @@
         body {
             /* background: linear-gradient(145deg, rgb(185, 255, 193), rgb(171, 209, 255)); */
             background: rgb(255, 238, 216);
+            
 
         }
         
@@ -123,21 +124,27 @@
         textarea {
             background: white;
             border: 1px solid #888;
-            min-height: 30rem;
-            min-width: 60rem;
+            min-height: 40rem;
+            min-width: 70rem;
             resize: none;
             overflow: none;
-            margin-top: -27rem;
-            margin-left: 30rem;
+            
             /* margin: flex;
             display: flex center; */
             padding: 25px;
             border-radius: 10px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            position: absolute;
+            margin:7%;
+            margin-left:20%;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
+            font-weight: 600;
+            font-size: 30px;
+
+
         }
 
+        
         /* $('textarea') .focus(function() {
                 $(this).css("background", "none")
 
@@ -146,12 +153,12 @@
                     $(this).css("background", "url(images/benice.png) center center no-repeat")
                 }
             }); */
+            
     </style>
 </head>
 
 <body>
 
-    <section id="intro">
         <div class="top-right-gradient">
 
         </div>
@@ -172,13 +179,9 @@
             </div> -->
         </div>
 
-        <div class="bottom-left-gradient">
-
-        </div>
-    </section>
 
     <section>
-        <textarea >{result.content}</textarea>
+        <textarea placeholder="Remember, be nice!. Enter Text Here"></textarea>
     </section>
 </body>
 
