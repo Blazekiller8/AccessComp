@@ -18,16 +18,16 @@ def startpy():
     # options.add_argument('headless')
     options.add_argument('window-size=1200x7000')
 
-    driver = webdriver.Chrome(PATH)
+    # driver = webdriver.Chrome(PATH)
 
-    url = 'https://en.wikipedia.org/wiki/English_language'
-    driver.get(url)
+    # url = ''
+    driver.get('https://en.wikipedia.org/wiki/Python_(programming_language)')
     
     # text = driver.find_element_by_xpath('//*[@id="mw-content-text"]/div[1]/p[2]').text
     for i in range(1,10):
         # if text=='':
         try:
-            text = driver.find_element_by_xpath(f'//*[@id="mw-content-text"]/div[1]/p[{i}]').text
+            text = driver.find_element_by_xpath('//*[@id="mw-content-text"]/div[1]/p[2]').text
             text = re.sub("[\(\[].*?[\)\]]", "", text)
             print(text)
         except:
@@ -56,6 +56,6 @@ def medium():
     print(text)
 
 if __name__ == '__main__':
-    # startpy()
+    startpy()
     # stackoverflow()
-    medium()
+    # medium()
