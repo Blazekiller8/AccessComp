@@ -140,10 +140,13 @@
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 600;
             font-size: 30px;
-
+            overflow-x: hidden;
+                overflow-y: scroll;
 
         }
-
+        textarea::-webkit-scrollbar {
+                display: none;
+            }
         
         /* $('textarea') .focus(function() {
                 $(this).css("background", "none")
