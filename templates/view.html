@@ -124,10 +124,13 @@
         textarea {
             background: white;
             border: 1px solid #888;
-            min-height: 40rem;
             min-width: 70rem;
             resize: none;
-            overflow: none;
+            display:inline-block;
+            resize: none;
+    overflow: hidden;
+    min-height: 50px;
+
             
             /* margin: flex;
             display: flex center; */
@@ -184,8 +187,13 @@
 
 
     <section>
-        <textarea >{result.content}</textarea>
+        <textarea oninput="auto_grow(this)" >{result.content}</textarea>
     </section>
 </body>
-
+<script>
+    function auto_grow(element) {
+    element.style.height = "5px";
+    element.style.height = (element.scrollHeight)+"px";
+}
+</script>
 </html>
