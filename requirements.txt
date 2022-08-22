@@ -4,3 +4,7 @@ uvicorn
 jinja2
 python-multipart
 python-dotenv
+bs4
+html2text
+# alternat
+gunicorn

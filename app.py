@@ -15,6 +15,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 import uvicorn
 
+from scraper import raw
+
 app = FastAPI()
 
 app.mount("/templates", StaticFiles(directory="templates"), name="templates")
@@ -56,16 +58,19 @@ def form_post(request: Request):
 #     return templates.TemplateResponse('form.html', context={'request': request, 'result': result})
 
 @app.post("/view")
-def form_post(request: Request, link: str = Form(...)):
-    result = result = {
+def view_post(request: Request, link: str = Form(...)):
+    
+    content = raw(link)
+
+    result = {
+        'content': content,
         'message': f"The URL Entered is {link}"
     }
-    ##TODO Change the template to view.html
     return templates.TemplateResponse('view.html', context={'request': request, 'result': result})
 
 
 if __name__ == '__main__':
-    # print("Please Run FastAPI as mentioned in README file")
+    # Please Run FastAPI as mentioned in README file
 
     uvicorn.run(
         "app:app",
