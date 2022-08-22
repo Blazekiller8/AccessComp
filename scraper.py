@@ -84,7 +84,7 @@ def raw(html_page):
     return text
 
 if __name__ == '__main__':
-    wikipedia()
+    # wikipedia()
     # stackoverflow()
     # medium()
     raw("https://medium.com/featurepreneur/aws-support-plan-12fd3e39cd7d")
