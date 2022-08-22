@@ -1,4 +1,3 @@
-
 '''
 Created on : 21 Aug 2022
 
@@ -25,7 +24,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-@app.get("/",)  # Base api
+@app.get("/form",)  # Base api
 def home_api():
 
     result_dict = {
@@ -42,7 +41,7 @@ def read_item(num: int):
         "number_twice": result
         }
 
-@app.get("/form")
+@app.get("/")
 def form_post(request: Request):
     result = {
         'message': "Enter the URL"
